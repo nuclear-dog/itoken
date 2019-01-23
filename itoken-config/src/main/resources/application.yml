@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: itoken-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/nuclear-dog/hello-spring-cloud-config
+          search-paths: nuclear-dog
+          username: nuclear-dog
+          password: a13731219244
+  zipkin:
+    base-url: http://localhost:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
